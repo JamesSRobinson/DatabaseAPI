@@ -9,6 +9,8 @@ namespace ContactManager.Models
         [Display(Name = "Email")]
         public string Email { get; set; }
         public string UserName  { get; set; }
+        public string Address1 { get; set; }
+        public string Address2 { get; set; }
         public string HomeTown { get; set; }
         public System.DateTime? BirthDate { get; set; }
     }
@@ -72,6 +74,8 @@ namespace ContactManager.Models
         [Display(Name = "Email")]
         public string Email { get; set; }
         public string UserName { get; set; }
+        public string Address1 { get; set; }
+        public string Address2 { get; set; }
         public string HomeTown { get; set; }
         public System.DateTime? BirthDate { get; set; }
 

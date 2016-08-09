@@ -173,6 +173,8 @@ namespace ContactManager.Controllers
                     UserName = model.UserName,
                     Email = model.Email,
                     BirthDate = model.BirthDate,
+                    Address1 = model.Address1,
+                    Address2 = model.Address2,
                     HomeTown = model.HomeTown
 
                 };
@@ -396,6 +398,8 @@ namespace ContactManager.Controllers
                     UserName = model.UserName,
                     Email = model.Email,
                     BirthDate = model.BirthDate,
+                    Address1 = model.Address1,
+                    Address2 = model.Address2,
                     HomeTown = model.HomeTown
 
                 };
