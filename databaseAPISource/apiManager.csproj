@@ -36,6 +36,24 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PublishDatabaseSettings>
+      <Objects>
+        <ObjectGroup Name="DefaultConnection-Deployment" Order="1">
+          <Destination Path="" />
+          <Object Type="DbFullSql">
+            <PreSource Path="Data Source=%28LocalDb%29\MSSQLLocalDB%3bAttachDbFilename=|DataDirectory|\androidAppDatabase.mdf%3bInitial Catalog=androidAppDatabase%3bIntegrated Security=True" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" />
+            <Source Path="obj\Debug\AutoScripts\DefaultConnection-Deployment_SchemaOnly.sql" Transacted="True" />
+          </Object>
+        </ObjectGroup>
+        <ObjectGroup Name="CloudConnection-Deployment" Order="2" xmlns="">
+          <Destination Path="" />
+          <Object Type="DbFullSql">
+            <PreSource Path="Server=tcp:jamesandroid.database.windows.net,1433%3bInitial Catalog=androidAppDatabase%3bPersist Security Info=False%3bUser ID=androidAdmin%3bPassword=Stonesour406%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" />
+            <Source Path="obj\Debug\AutoScripts\CloudConnection-Deployment_SchemaOnly.sql" Transacted="True" />
+          </Object>
+        </ObjectGroup>
+      </Objects>
+    </PublishDatabaseSettings>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -228,13 +246,9 @@
     <Compile Include="Migrations\201608052153346_Initial.Designer.cs">
       <DependentUpon>201608052153346_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201608081034229_update1.cs" />
-    <Compile Include="Migrations\201608081034229_update1.Designer.cs">
-      <DependentUpon>201608081034229_update1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201608082135250_update2.cs" />
-    <Compile Include="Migrations\201608082135250_update2.Designer.cs">
-      <DependentUpon>201608082135250_update2.cs</DependentUpon>
+    <Compile Include="Migrations\201608091214311_update.cs" />
+    <Compile Include="Migrations\201608091214311_update.Designer.cs">
+      <DependentUpon>201608091214311_update.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -335,11 +349,8 @@
     <EmbeddedResource Include="Migrations\201608052153346_Initial.resx">
       <DependentUpon>201608052153346_Initial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201608081034229_update1.resx">
-      <DependentUpon>201608081034229_update1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201608082135250_update2.resx">
-      <DependentUpon>201608082135250_update2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201608091214311_update.resx">
+      <DependentUpon>201608091214311_update.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

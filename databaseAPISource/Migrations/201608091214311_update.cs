@@ -3,7 +3,7 @@ namespace ContactManager.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class update2 : DbMigration
+    public partial class update : DbMigration
     {
         public override void Up()
         {

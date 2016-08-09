@@ -8,7 +8,7 @@ namespace ContactManager.Models
         [Required]
         [Display(Name = "Email")]
         public string Email { get; set; }
-
+        public string UserName  { get; set; }
         public string HomeTown { get; set; }
         public System.DateTime? BirthDate { get; set; }
     }
@@ -71,6 +71,10 @@ namespace ContactManager.Models
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }
+        public string UserName { get; set; }
+        public string HomeTown { get; set; }
+        public System.DateTime? BirthDate { get; set; }
+
 
         [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
